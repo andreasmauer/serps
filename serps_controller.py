@@ -13,8 +13,8 @@ class Controller:
 
 		#crawler = serps_crawler.Bluelinks('kws-celebrity.csv')
 		#serps_report.ToCsv(crawler.websites_with_rankings, 'rankings_celebrity.csv')
-		crawler = serps_crawler.Bluelinks('R:\\Marketing\\Channels\\SEO\\Ongoing\\Regularly - Weekly reports\\python\\Portable Python 2.7.5.1\\projects\\serps\\kws_newfooter1.csv')
-                serps_report.ToCsv(crawler.websites_with_rankings, 'R:\\Marketing\\Channels\\SEO\\Ongoing\\Regularly - Weekly reports\\python\\Portable Python 2.7.5.1\\projects\\serps\\rankings4.csv')
+		crawler = serps_crawler.Bluelinks('R:\\Marketing\\Channels\\SEO\\Ongoing\\Regularly - Weekly reports\\python\\Portable Python 2.7.5.1\\projects\\serps\\test.csv')
+                serps_report.ToCsv(crawler.websites_with_rankings, 'R:\\Marketing\\Channels\\SEO\\Ongoing\\Regularly - Weekly reports\\python\\Portable Python 2.7.5.1\\projects\\serps\\test_result.csv')
 
 
 a = Controller()
