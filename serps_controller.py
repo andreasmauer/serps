@@ -10,7 +10,7 @@ class Controller:
 	def __init__(self):
 
 		self.keywordlist = 'kws.csv'
-		self.where = 'kws_fashionette.csv'
+		self.where = 'kws_fashionette2.csv'
 
 		self.one_by_one()
 
@@ -46,14 +46,14 @@ class Controller:
 					if aSerp.http_response_code is not 200:
 						ranking = 'error'
 						landingPage = 'error'
+						break
+
 					else:
 						ranking = aSerp.returnRanking(website)
 						landingPage = aSerp.returnLandingPage(website)
 
 
 				except:
-					ranking = '>10'
-					landingPage = ''
 					pass
 
 				print keyword + ' ' + str(ranking) + ' ' + landingPage	

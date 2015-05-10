@@ -31,7 +31,6 @@ class Serp:
 		self.http_response_code = ''
 		self.url = url
 		self.links = []
-		#self.db_object = db_object
 		self.htmlcrawler()
 
 
@@ -64,6 +63,11 @@ class Serp:
 	def printHtml (self):
 		print self.html
 
+	def getHtmlOnFile(self, where):
+		with open(where, 'ab') as text_file:
+			text_file.write(self.html)
+
+
 	def find_seo_links (self):
 
 
@@ -87,7 +91,7 @@ class Serp:
 	def returnRanking (self, website):
 
 		# as long as I have no information then is unknown
-		ranking = "unknown"
+		ranking = '>10'
 
 		if self.links == []:
 			self.find_seo_links()
@@ -109,7 +113,7 @@ class Serp:
 	
 	def returnLandingPage(self, website):
 
-		landing = "unknown"
+		landing = '>10'
 		
 		if self.links == []:
 			self.find_seo_links()
