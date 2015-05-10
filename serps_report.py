@@ -11,16 +11,13 @@ class ToCsv:
 		self.where = where
 
 		# shoot the function to write 
-		self.write_rankings()
+		self.write_single_line()
 
-	
-	def write_rankings(self):
-		
-		for element in self.data_to_write:
-	
-			with open(self.where, 'ab') as f:
-				mycsv = csv.writer(f, delimiter=',', lineterminator='\n')
-				mycsv.writerow(element)
+	def write_single_line(self):
+
+		with open(self.where, 'ab') as f:
+			mycsv = csv.writer(f, delimiter=',', lineterminator='\n')
+			mycsv.writerow(self.data_to_write)
 
 
 
