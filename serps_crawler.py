@@ -42,7 +42,7 @@ class Serp:
 		#print self.url
 			
 		# create a random sleep time between 0.5 secs and 1.5
-		randomfloat = random.uniform(1.0, 1.5)
+		randomfloat = random.uniform(0, 0.5)
 		sleep(randomfloat)
 		request = urllib2.Request(self.url)
 
@@ -113,7 +113,7 @@ class Serp:
 	
 	def returnLandingPage(self, website):
 
-		landing = '>10'
+		landingPage = '>10'
 		
 		if self.links == []:
 			self.find_seo_links()
@@ -122,10 +122,10 @@ class Serp:
 
 			if website in link:
 
-				landing = link
+				landingPage = link
 				break
 
-		return landing
+		return landingPage
 
 	def returnLinks(self):
 

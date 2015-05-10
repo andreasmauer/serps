@@ -1,5 +1,6 @@
 import csv
 import urllib
+import time
 import serps_crawler
 import serps_report
 # as always with portable python, I have to define paths depending on environment
@@ -9,8 +10,8 @@ class Controller:
 
 	def __init__(self):
 
-		self.keywordlist = 'kws.csv'
-		self.where = 'kws_fashionette2.csv'
+		self.keywordlist = 'kws2.csv'
+		self.where = 'kws_fashionette4.csv'
 
 		self.one_by_one()
 
@@ -56,11 +57,13 @@ class Controller:
 				except:
 					pass
 
-				print keyword + ' ' + str(ranking) + ' ' + landingPage	
+				print keyword + ' ' + str(ranking) + ' ' + str(landingPage)	
 
 				# I pass the line to the report 
 				try: 
-					aReport = serps_report.ToCsv([keyword, ranking, landingPage], self.where)
+
+
+					aReport = serps_report.ToCsv([keyword, ranking, landingPage, time.strftime("%d/%m/%Y")], self.where)
 
 				except:
 					print 'error: couldnt write on the csv file'
