@@ -66,4 +66,6 @@ class Controller:
 					print 'error: couldnt write on the csv file'
 
 
+
+
 a = Controller()
